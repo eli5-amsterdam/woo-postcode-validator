@@ -1,0 +1,12 @@
+/**
+ * All of the CSS for your public-facing functionality should be
+ * included in this file.
+ */
+
+.woocommerce-billing-fields input.woocommerce-postcode-validator-loading {
+    background-color: #ffffff;
+    background-image: url("../image/loader.gif");
+    background-size: 25px 25px;
+    background-position: 95% center;
+    background-repeat: no-repeat;
+}
