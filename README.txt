@@ -39,5 +39,8 @@ You can modify the loader by overriding the CSS for the input fields, the curren
 
 == Changelog ==
 
+= 1.0.1 =
+* Modified namespacing of functions
+
 = 1.0 =
 * First release
