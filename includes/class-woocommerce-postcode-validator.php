@@ -123,15 +123,15 @@ class Woocommerce_Postcode_Validator
     {
         $plugin_public = new Woocommerce_Postcode_Validator_Public($this->get_plugin_name(), $this->get_version());
 
-        $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_styles');
-        $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'enqueue_scripts');
+        $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'woocommerce_postcode_validator_enqueue_styles');
+        $this->loader->add_action('wp_enqueue_scripts', $plugin_public, 'woocommerce_postcode_validator_enqueue_scripts');
 
         // Add Ajax function
         $this->loader->add_action('wp_ajax_nopriv_get_woocommerce_postcode_validation', $plugin_public, 'get_woocommerce_postcode_validation');
         $this->loader->add_action('wp_ajax_get_woocommerce_postcode_validation', $plugin_public, 'get_woocommerce_postcode_validation');
 
         // Add ajax base url to head
-        $this->loader->add_action('wp_head', $plugin_public, 'add_ajax_url');
+        $this->loader->add_action('wp_head', $plugin_public, 'woocommerce_postcode_validator_add_ajax_url');
     }
 
     /**

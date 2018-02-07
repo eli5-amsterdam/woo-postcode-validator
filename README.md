@@ -2,6 +2,9 @@
 
 WooCommerce Postcode Validator lets you validate Dutch postcodes and auto-fill the address and city for the filled in postcode. This is achieved by using the BAG / LocatieServer API.
 
+**NOTE: This plugin depends on the LocatieServer API from PDOK: https://www.pdok.nl/nl/producten/pdok-locatieserver**
+This API enables the plugin to find and validate postcodes and find the corresponding address and city name for The Netherlands.
+
 ## Main features
 - Validate the filled in postal code for Dutch orders, and auto-fill the street name and city.
 

@@ -15,7 +15,7 @@
  * @wordpress-plugin
  * Plugin Name:       WooCommerce Postcode Validator
  * Description:       WooCommerce Postcode Validator lets you validate Dutch postcodes and auto-fill the address for the filled in postcode.
- * Version:           1.0.0
+ * Version:           1.0.1
  * Author:            Eli5
  * Author URI:        https://www.eli5.io
  * License:           GPL-2.0+
@@ -35,9 +35,8 @@ if (!defined('WPINC')) {
 /**
  * Currently plugin version.
  * Start at version 1.0.0 and use SemVer - https://semver.org
- * Rename this for your plugin and update it as you release new versions.
  */
-define('PLUGIN_NAME_VERSION', '1.0.0');
+define('WOOCOMMERCE_POSTCODE_VALIDATOR_VERSION', '1.0.1');
 
 /**
  * The core plugin class that is used to define internationalization,
@@ -60,7 +59,7 @@ function run_woocommerce_postcode_validator()
         $plugin = new Woocommerce_Postcode_Validator();
         $plugin->run();
     } else {
-        add_action('admin_notices', 'fallback_notice');
+        add_action('admin_notices', 'woocommerce_postcode_validator_fallback_notice');
     }
 }
 
@@ -69,7 +68,7 @@ function run_woocommerce_postcode_validator()
  *
  * @return string Fallack notice.
  */
-function fallback_notice()
+function woocommerce_postcode_validator_fallback_notice()
 {
     $message = '<div class="error">';
     $message .= '<p>' . sprintf(__('Woocommerce Postcode Validator depends on <a href="%s">WooCommerce</a> to work!', 'woocommerce-postcode-validator'), 'http://wordpress.org/extend/plugins/woocommerce/') . '</p>';

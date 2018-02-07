@@ -69,7 +69,7 @@ class Woocommerce_Postcode_Validator_Public
      *
      * @since    1.0.0
      */
-    public function enqueue_styles()
+    public function woocommerce_postcode_validator_enqueue_styles()
     {
         wp_enqueue_style($this->plugin_name, plugin_dir_url(__FILE__) . 'css/woocommerce-postcode-validator-public.css', [], $this->version, 'all');
     }
@@ -79,7 +79,7 @@ class Woocommerce_Postcode_Validator_Public
      *
      * @since    1.0.0
      */
-    public function enqueue_scripts()
+    public function woocommerce_postcode_validator_enqueue_scripts()
     {
         wp_enqueue_script($this->plugin_name, plugin_dir_url(__FILE__) . 'js/woocommerce-postcode-validator-public.js', ['jquery'], $this->version, false);
     }
@@ -152,7 +152,7 @@ class Woocommerce_Postcode_Validator_Public
      *
      * @return void
      */
-    public function add_ajax_url()
+    public function woocommerce_postcode_validator_add_ajax_url()
     {
         echo '<script type="text/javascript">';
         echo 'var woocommerce_postcode_validator_ajax_url = "' . admin_url('admin-ajax.php') . '";';
